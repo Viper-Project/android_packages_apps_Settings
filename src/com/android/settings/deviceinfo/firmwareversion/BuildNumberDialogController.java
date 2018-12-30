@@ -22,6 +22,8 @@ import android.text.BidiFormatter;
 
 import com.android.settings.R;
 
+import android.os.SystemProperties;
+
 public class BuildNumberDialogController {
 
     @VisibleForTesting
@@ -33,11 +35,24 @@ public class BuildNumberDialogController {
         mDialog = dialog;
     }
 
+    private String getViperVersion(){
+        String buildDate = SystemProperties.get("ro.viper.build_date","");
+        String viperDevice = SystemProperties.get("ro.viper.device","");
+        String buildType = SystemProperties.get("ro.viper.buildtype","unofficial").toUpperCase();
+       return buildDate.equals("") ? "" : "ViperOS-" + viperDevice  + "-" +  buildDate + "-" + buildType;
+}
+
     /**
      * Updates the build number to the dialog.
      */
     public void initialize() {
-        mDialog.setText(BUILD_NUMBER_VALUE_ID,
-                BidiFormatter.getInstance().unicodeWrap(Build.DISPLAY));
+        StringBuilder sb = new StringBuilder();
+        sb.append(BidiFormatter.getInstance().unicodeWrap(Build.DISPLAY));
+        String viperVersion = getViperVersion();
+        if (!viperVersion.equals("")){
+            sb.append("\n");
+            sb.append(viperVersion);
+        }
+        mDialog.setText(BUILD_NUMBER_VALUE_ID, sb.toString());
     }
 }

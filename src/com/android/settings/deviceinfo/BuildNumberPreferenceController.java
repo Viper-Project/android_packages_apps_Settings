@@ -46,6 +46,8 @@ import com.android.settingslib.core.lifecycle.LifecycleObserver;
 import com.android.settingslib.core.lifecycle.events.OnResume;
 import com.android.settingslib.development.DevelopmentSettingsEnabler;
 
+import android.os.SystemProperties;
+
 public class BuildNumberPreferenceController extends AbstractPreferenceController implements
         PreferenceControllerMixin, LifecycleObserver, OnResume {
 
@@ -83,13 +85,28 @@ public class BuildNumberPreferenceController extends AbstractPreferenceControlle
         final Preference preference = screen.findPreference(KEY_BUILD_NUMBER);
         if (preference != null) {
             try {
-                preference.setSummary(BidiFormatter.getInstance().unicodeWrap(Build.DISPLAY));
+                StringBuilder sb = new StringBuilder();
+                sb.append(BidiFormatter.getInstance().unicodeWrap(Build.DISPLAY));
+                String viperVersion = getViperVersion();
+                if (!viperVersion.equals("")){
+                    sb.append("\n");
+                    sb.append(viperVersion);
+                }
+                preference.setSummary(sb.toString());
                 preference.setEnabled(true);
             } catch (Exception e) {
                 preference.setSummary(R.string.device_info_default);
             }
         }
     }
+
+    private String getViperVersion(){
+        String buildDate = SystemProperties.get("ro.viper.build_date","");
+        String viperDevice = SystemProperties.get("ro.viper.device","");
+        String buildType = SystemProperties.get("ro.viper.buildtype","unofficial").toUpperCase();
+       return buildDate.equals("") ? "" : "ViperOS-" + viperDevice  + "-" +  buildDate + "-" + buildType;
+
+}
 
     @Override
     public String getPreferenceKey() {
