@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2018 ViperOS Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- About phone screen, ViperOS version -->
+    <string name="viper_version">ViperOS sürümü</string>
+    <string name="viper_version_default">Bilinmiyor</string>
+    <string name="keywords_viper_version">ViperOS sürümü</string>
+
+    <!-- About phone screen, build date -->
+    <string name="build_date">Yapı tarihi</string>
+    <string name="build_date_default">2015-01-01-0000</string>
+    <string name="keywords_build_date">yapı tarihi, yapı bilgisi</string>
+
+    <!-- Venom Settings -->
+    <string name="venom_settings_title">Venom</string>
+    <string name="venom_settings_summary">Çeşitli eklentiler</string>
+
+    <!-- Themes -->
+    <string name="theme_category_title">Tema seçenekleri</string>
+    <string name="disable_themes_installed_title">Substratum ile çatışmaları önlemek için sistem temaları kullanılamıyor. Temaları kullanmak istiyorsanız lütfen substratumu kaldırın.</string>
+    <string name="disable_accents_installed_title">Substratum ile çakışmaları önlemek için vurgu rengi seçici kullanılamıyor. Vurgu rengi seçiciyi kullanmak istiyorsanız lütfen substratumu kaldırın.</string>
+    <string name="accent_picker_dialog_title">Bir vurgu rengi seçin</string>
+    <string name="theme_accent_picker_title">Vurgu rengi</string>
+    <string name="theme_accent_picker_summary">Sistem teması için vurgu rengi seçin</string>
+    <string name="theme_accent_picker_default">Varsayılan</string>
+    <string name="accent_picker_material_colors">Malzeme paleti</string>
+    <string name="accent_picker_custom_colors">Kullanıcı isteği</string>
+    <string name="applying_theme_toast">Tema uygulanıyor, lütfen bekleyin...</string>
+    <string name="theme_applied_toast">Tema uygulandı!</string>
+    <string name="systemui_theme_black">Siyah</string>
+    <string name="systemui_theme_bluenight">Mavi gece</string>
+    <string name="theme_picker_dialog_title">Bir tema rengi seçin</string>
+    <string name="theme_picker_summary">Bir sistem teması seçin</string>
+    <string name="theme_picker_auto">Otomatik</string>
+
+    <!-- QS tile styles -->
+    <string name="qs_tile_style_title">Hızlı ayarlar kare stili</string>
+    <string name="qs_tile_style_default">Varsayılan</string>
+    <string name="qs_tile_style_square">Kare</string>
+    <string name="qs_tile_style_rounded_square">Yuvarlak kare</string>
+    <string name="qs_tile_style_squircle">Squircle</string>
+    <string name="qs_tile_style_tear_drop">Gözyaşı damlası</string>
+    <string name="qs_tile_style_double_circle">Çift daire</string>
+    <string name="qs_styles_dialog_title">Bir hızlı ayarlar kare stili seçin</string>
+
+    <!-- Audio Panel view  -->
+    <string name="audio_panel_view_title">Ses paneli</string>
+    <string name="audio_panel_view_summary">Birim paneli iletişim kutusunu özelleştir</string>
+    <string name="audio_panel_view_info">Burada devre dışı bırakılmış olsa bile aktif ses akışı ekranda gösterilecektir. Burada etkinleştirilen ses akışları zorla görüntülenir.</string>
+    <string name="audio_panel_view_media_title">Medya</string>
+    <string name="audio_panel_view_ringer_title">Zil sesi</string>
+    <string name="audio_panel_view_notification_title">Bildirimler</string>
+    <string name="audio_panel_view_notification_disabled">Zil sesi ve bildirim sesleri bağlantılı</string>
+    <string name="audio_panel_view_alarm_title">Alarm</string>
+    <string name="audio_panel_view_voice_title">Sesli arama</string>
+    <string name="audio_panel_view_bt_sco_title">Bluetooth</string>
+
+    <!-- SELinux Status -->
+    <string name="selinux_status">SELinux durumu</string>
+    <string name="selinux_status_disabled">Devre dışı</string>
+    <string name="selinux_status_permissive">Permissive (Serbest)</string>
+    <string name="selinux_status_enforcing">Enforcing (Zorunlu)</string>
+
+</resources>
